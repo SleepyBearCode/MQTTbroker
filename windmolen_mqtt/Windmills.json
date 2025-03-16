@@ -1,0 +1,26 @@
+[
+  {
+    "windmolen": "Windmolen_1",
+    "offshore": false,
+    "status": "On",
+    "facing": "South"
+  },
+  {
+    "windmolen": "Windmolen_2",
+    "offshore": false,
+    "status": "Off",
+    "facing": "North"
+  },
+  {
+    "windmolen": "Windmolen_3",
+    "offshore": true,
+    "status": "Off",
+    "facing": "West"
+  },
+  {
+    "windmolen": "Windmolen_4",
+    "offshore": false,
+    "status": "On",
+    "facing": "South"
+  }
+]

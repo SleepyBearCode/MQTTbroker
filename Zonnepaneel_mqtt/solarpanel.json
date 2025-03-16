@@ -1,0 +1,22 @@
+[
+  {
+    "solar_panel": "solarpanel_1",
+    "facing": "West",
+    "status": "Off"
+  },
+  {
+    "solar_panel": "solarpanel_2",
+    "facing": "North",
+    "status": "On"
+  },
+  {
+    "solar_panel": "solarpanel_3",
+    "facing": "South",
+    "status": "On"
+  },
+  {
+    "solar_panel": "solarpanel_4",
+    "facing": "East",
+    "status": "On"
+  }
+]

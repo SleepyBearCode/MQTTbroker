@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Windmolen/zonnepaneel</title>
+</head>
+<body>
+    <ul>
+        <li><a href="/windmill">Windmolen</a></li>
+        <li><a href="/solar">Zonnenpaneel</a></li>
+    </ul>
+    <h1>Dashboard</h1>
+
+        <h2>Van {{ subject }}:</h2>
+
+        <ul>
+            {% for message in messages_device %}
+                <li>Topic: {{ message.topic }}, Payload: {{ message.payload }}</li>
+            {% endfor %}
+        </ul>
+
+        <h2>Van sensor:</h2>
+        <ul>
+            {% for message in messages_sensor %}
+                <li>Topic: {{ message.topic }}, Payload: {{ message.payload }}</li>
+            {% endfor %}
+        </ul>
+      
+
+        <a class="btn btn-outline-secondary" {% if subject == 'windmill' %} href="{% url 'w_add' %}" {%else%} href="{% url 's_add' %}" {%endif%}>Send request</a>
+        <a class="btn btn-outline-secondary" {% if subject == 'windmill' %} href="{% url 'w_ref' %}" {%else%} href="{% url 's_ref' %}" {%endif%}>refresh</a>
+       
+
+        {% if subject == 'windmill' %}       
+        <h2>Status</h2>
+        <form action="windmill/status" method="post">    
+            {% csrf_token %}
+            <select name="target_wind">
+                <option value="Windmolen_1">Windmolen 1</option>
+                <option value="Windmolen_2">Windmolen 2</option>
+                <option value="Windmolen_3">Windmolen 3</option>
+                <option value="Windmolen_4">Windmolen 4</option>
+            </select>  
+            <select name="status_wind">
+                <option value="false">Off</option>
+                <option value="true">On</option>
+            </select>  
+            <select name="facing_wind">
+                <option value="North">North</option>
+                <option value="East">East</option>
+                <option value="West">West</option>
+                <option value="South">South</option>
+
+            </select>  
+        <input type="submit" value="status">
+        {%endif%}
+</body>
+</html>
