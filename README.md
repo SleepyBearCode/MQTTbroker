@@ -8,7 +8,7 @@ Klas: 3ITIOT1
 Dit analyseverslag belicht de essentiële aspecten van de beveiliging van een innovatief energiesysteem, waarbij windmolens en zonnepanelen zijn gekoppeld aan een Mosquitto MQTT-broker. De architectuur, communicatiebeveiliging en afhankelijkheden van het systeem worden grondig besproken. Daarnaast biedt het verslag inzicht in de uitgevoerde tests en de resultaten daarvan, inclusief de ontdekkingen en uitdagingen op het gebied van netwerkbeveiliging.
 
 ## Architectuur van het Systeem:
-![werking van systeem](systeem.png)
+![werking van systeem](verslagen/systeem.png)
 
 Het systeem is al opgebouwd volgens het volgende principe: de windmolens en zonnepanelen zijn verbonden met de Mosquitto broker via twee clients, één voor het publiceren en de andere voor het abonneren. Bijvoorbeeld, op het topic 'windmolen/data' wordt informatie elke 5 minuten verzonden vanuit één van de 4 windmolens. Daarnaast kan via het topic 'windmolen/request' op elk moment specifieke informatie worden opgevraagd over een van de windmolens, zonder te hoeven wachten op het periodieke verzenden van gegevens. Voor de zonnepanelen geldt hetzelfde principe.
 
